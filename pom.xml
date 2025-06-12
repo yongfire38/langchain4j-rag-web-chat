@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>egovframe</groupId>
 	<artifactId>langchain4j-rag-web-chat</artifactId>
@@ -78,25 +78,25 @@
 		</dependency>
 
 		<!-- 표준프레임워크 실행환경 -->
-        <dependency>
-		    <groupId>org.egovframe.rte</groupId>
-		    <artifactId>org.egovframe.rte.ptl.mvc</artifactId>
-		    <version>${org.egovframe.rte.version}</version>
-		    <exclusions>
-		    	<exclusion>
-		    		<artifactId>commons-logging</artifactId>
-		    		<groupId>commons-logging</groupId>
-		    	</exclusion>
-		    </exclusions>
-        </dependency>
-        
-        <!-- Dependencies related to LangChain -->
+		<dependency>
+			<groupId>org.egovframe.rte</groupId>
+			<artifactId>org.egovframe.rte.ptl.mvc</artifactId>
+			<version>${org.egovframe.rte.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Dependencies related to LangChain -->
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
 			<artifactId>langchain4j</artifactId>
 			<version>${langchain4j.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
 			<artifactId>langchain4j-ollama</artifactId>
@@ -107,7 +107,7 @@
 			<artifactId>langchain4j-qdrant</artifactId>
 			<version>${langchain4j.version}</version>
 		</dependency>
-		
+
 		<!-- Embedding Model -->
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
@@ -121,7 +121,13 @@
 			<artifactId>flexmark-all</artifactId>
 			<version>0.64.8</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>1.19.6</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
